@@ -1,0 +1,11 @@
+logging
+pandas
+transformers 
+requests 
+bs4
+pandas 
+re
+torch
+numpy
+
+-e .
