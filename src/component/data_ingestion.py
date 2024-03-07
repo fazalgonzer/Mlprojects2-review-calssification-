@@ -27,12 +27,15 @@ class Reading_server:
             regex=re.compile('.*comment.*')
             results=soup.find_all('p',{'class':regex})
             reviews=[result.text for result in results ]
-            df=pd.DataFrame(np.array(reviews),columns=['review'])
+           
+            df=pd.DataFrame(np.array(reviews),columns=['reviews'])
+            print(df.head())
+            df.to_csv('tmp.csv')
             
-            df.to_csv('artifacts\tmp.csv')
+            
 
             logging.info("writing the data csv")
-            
+            return str('artifacts\tmp.csv')
 
 
 
